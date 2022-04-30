@@ -54,6 +54,7 @@ function stop() {
   buttons.classList.add("start");
   buttons.classList.remove("break");
   resetBtn.classList.add("reset-entry");
+  console.log("reset btn showen")
   skipBtn.style.display = "none";
 }
 
@@ -96,7 +97,7 @@ function reset() {
   motivation.textContent = "Focus!";
   buttons.classList.remove("stop");
   buttons.classList.add("start");
-  resetBtn.style.display = "none";
+  resetBtn.classList.remove("reset-entry");
   buttons.classList.remove("break");
   body.classList.remove("break");
 }
