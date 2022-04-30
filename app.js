@@ -15,6 +15,7 @@ const buttons = document.querySelector(".buttons");
 const body = document.querySelector("body");
 const ringtone = document.querySelector("audio");
 
+
 let seconds = 1500; //25 munites
 let count = false; //to check if the timer is counting or not , initially No
 let breakTime = false; // to check if we are in the break time or not,initially No
@@ -54,7 +55,6 @@ function stop() {
   buttons.classList.add("start");
   buttons.classList.remove("break");
   resetBtn.classList.add("reset-entry");
-  console.log("reset btn showen")
   skipBtn.style.display = "none";
 }
 
