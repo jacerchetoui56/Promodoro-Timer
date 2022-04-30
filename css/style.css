@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #7e0000;
+  font-family: "Tajawal", sans-serif;
+  position: relative;
+}
+
+.credit{
+    position: absolute;
+    bottom: .5rem;
+    right: 1rem;
+    color: white;
+    letter-spacing: 2px;
+    
+}
+
+body.break {
+  background-color: #07468f;
+}
+
+.title {
+  font-size: 1.75rem;
+  color: white;
+  padding: 1rem;
+}
+.title i{
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.time {
+  border-radius: 50%;
+  border: solid 2px white;
+  width: 380px;
+  height: 380px;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-weight: 400;
+  position: relative;
+}
+.time i{
+    position: absolute;
+    bottom: 2rem;
+    font-size: 1.75rem;
+    opacity: .7;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: none;
+}
+.time h1 {
+  font-size: 6rem;
+  width: 220px;
+}
+.time h3 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buttons {
+  position: relative;
+}
+
+.buttons i {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -3rem;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.buttons .reset.reset-entry {
+  display: block;
+  animation: entry 0.2s;
+}
+.buttons i:hover {
+  text-shadow: 0 0 2px white;
+}
+
+@keyframes entry {
+  from {
+    font-size: 0.2rem;
+  }
+  to {
+    font-size: 2rem;
+  }
+}
+
+.buttons h1 {
+  padding: 1rem 5rem;
+  background-color: rgba(255, 255, 255, 0.747);
+  color: black;
+  font-family: sans-serif;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius:2.5rem;
+}
+.buttons h1:hover {
+  background-color: rgba(255, 255, 255);
+}
+
+.buttons .stop,
+.buttons .break {
+  display: none;
+}
+/* names of the buttons */
+.buttons.stop .stop,
+.buttons.start .start,
+.buttons.break .break {
+  display: block;
+}
+.buttons.break .start,
+.buttons.break .stop,
+.buttons.stop .start,
+.buttons.stop .break,
+.buttons.start .break,
+.buttons.start .stop {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 80%;
+  }
+
+  .time {
+    margin-top: 7rem;
+    width: 330px;
+    height: 330px;
+  }
+  .time h1 {
+    width: 175px;
+  }
+  .buttons h1{
+      font-size:2rem ;
+  }
+  .title{
+    font-size: 2rem;
+  }
+}
